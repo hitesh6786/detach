@@ -1,0 +1,14 @@
+---
+- name: Detach volume from EC2 instance
+  hosts: localhost
+  gather_facts: False
+  vars:
+    region: your-region-name
+    volume_id: your-volume-id
+
+  tasks:
+    - name: Detach volume
+      ec2_vol:
+        region: "{{ region }}"
+        volume_id: "{{ volume_id }}"
+        state: absent
