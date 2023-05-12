@@ -3,8 +3,8 @@
   hosts: localhost
   gather_facts: False
   vars:
-    region: your-region-name
-    volume_id: your-volume-id
+    region: ap-south-1
+    volume_id: vol-0aeb82b96c731e695
 
   tasks:
     - name: Detach volume
